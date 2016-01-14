@@ -15,7 +15,7 @@ public class NData {
 	private boolean CANSW=false;
 	private boolean CANBW=false;
 	private boolean CANAMU=false;
-	private boolean CANMULTI=false;
+	//private boolean CANMULTI=false;
 	private boolean CANARM=false;
 	private boolean CANTOOL=false;
 	private boolean CANLINK=false;
@@ -28,12 +28,12 @@ public class NData {
 	
 	
 	
-	public NData(int id,String name,String methodName,int nodeGroup,Addon addon){
+	public NData(int id,String name,String methodName,int nodeGroup,Addon addon,int uid){
 		ID=id;
 		NAME=name;
 		MNAME=methodName;
 		GROUP=nodeGroup;
-		UID=Instances.getIndex().genNodeUID(methodName, addon, id);
+		UID=uid;
 	}
 	
 	public int getID(){
@@ -72,9 +72,9 @@ public class NData {
 	public boolean canAmulet(){
 		return CANAMU;
 	}
-	public boolean canMulti(){
+	/*public boolean canMulti(){
 		return CANMULTI;
-	}
+	}*/
 	public boolean canArmor(){
 		return CANARM;
 	}
@@ -104,21 +104,6 @@ public class NData {
 		}
 	}
 	
-	public boolean isAEvent(int id){
-		boolean b1=false;
-		try{
-			for(int i=0;i>-1;i++){
-				if(AEVENTS[i]==id){
-					b1=true;
-					break;
-				}
-			}
-		}catch(ArrayIndexOutOfBoundsException e){
-			b1=false;
-		}
-		return b1;
-	}
-	
 	public int getUID(){
 		return UID;
 	}
@@ -128,9 +113,9 @@ public class NData {
 	
 	//SETMETHODS
 	
-	public NData setTriggers(int... events){
+	public NData setIsTrigger(){
 		ISTRI=true;
-		AEVENTS=events;
+		//AEVENTS=events;
 		return this;
 	}
 	public NData setCanBeOnBlock(boolean b1){
@@ -149,10 +134,10 @@ public class NData {
 		CANAMU=b1;
 		return this;
 	}
-	public NData setCanBeOnMultiBlock(boolean b1){
+	/*public NData setCanBeOnMultiBlock(boolean b1){
 		CANMULTI=b1;
 		return this;
-	}	
+	}*/	
 	public NData setCanBeOnArmor(boolean b1){
 		CANARM=b1;
 		return this;

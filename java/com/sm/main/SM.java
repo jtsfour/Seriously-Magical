@@ -43,6 +43,7 @@ public class SM
 		//EnchPU epu = new EnchPU();
     	//MinecraftForge.EVENT_BUS.register(enhandler);
     	//FMLCommonHandler.instance().bus().register(enhandler);
+		
     }
    
     

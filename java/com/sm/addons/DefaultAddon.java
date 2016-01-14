@@ -49,7 +49,7 @@ public class DefaultAddon extends Addon {
 		System.out.println("Registering Ench Nodes");
 		regNode(100, "Test Node", "test_method", 1,this).setCanBeLinked(true);
 		
-		System.out.println("Ench Nodes Successfully Registered");
+		System.out.println("Ench Nodes Successfully Registered---------------------------------------------------------------");
 	}
 
 }

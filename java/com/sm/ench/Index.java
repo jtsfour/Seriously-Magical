@@ -111,8 +111,9 @@ public class Index {
 	}
 	
 	public NData registerNode(String modid,int id,String name,String methodName,int nodeGroup,Addon addon){
-		NData nd = new NData(id,name,methodName,nodeGroup,addon);
+		NData nd = new NData(id,name,methodName,nodeGroup,addon,genNodeUID(methodName,addon,id));
 		ndata.get(getAddonListId(addon.getModid())).add(nd);
+		System.out.println("Successfully Registered Node : "+name+" from mod : "+addon.getModid());
 		return nd;
 	}
 	
@@ -125,7 +126,7 @@ public class Index {
 		int v3=1;
 		int v4=1;
 		int v5=1;
-		String name = addon.getModid();
+		String modid = addon.getModid();
 		for(int i0=0;i0<mname.length();i0++){
 			try{
 			v1 *= (byte)mname.charAt(i0);
@@ -134,10 +135,10 @@ public class Index {
 				break;
 			}
 		}
-		for(int i1=0;i1<name.length();i1++){
+		for(int i1=0;i1<modid.length();i1++){
 			try{
-				v2 *= (byte)name.charAt(i1);
-				v2 += (byte)name.charAt(i1);	
+				v2 *= (byte)modid.charAt(i1);
+				v2 += (byte)modid.charAt(i1);	
 				}catch(Exception e){
 					break;
 				}

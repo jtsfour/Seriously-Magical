@@ -24,6 +24,7 @@ public class AddonHandler {
 		INST=Instances.getInstance();
 		INST.setAHandler(this);
 		VER=SM.VERSION;
+		INDEX=Instances.getIndex();
 	}
 	
 	public void registerAddon(Addon addon){

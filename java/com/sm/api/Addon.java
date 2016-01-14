@@ -22,12 +22,15 @@ public abstract class Addon {
 			ID=addon.getModid();
 			if(Loader.isModLoaded("seriouslymagical")){
 				bool=true;
+				System.out.println("Found Mod Initializing Addon");
 				try{
 					com.sm.main.AddonHandler ah = (com.sm.main.AddonHandler)AH;
 					ah.registerAddon(addon);
 				}catch(Exception e){
 					bool=false;
 					flag=true;
+					System.out.println("FAILED ADDON LOAD---------------------");
+					e.printStackTrace();
 				}
 			}else{
 				System.out.println("[ERROR]: SERIOUSLY MAGICAL IS NOT LOADED ADDON NOT REGISTERED!");
@@ -37,7 +40,7 @@ public abstract class Addon {
 			return bool;
 		}
 	
-	public final com.sm.ench.NData regNode(int id,String name,String methodName,int nodeGroup,Addon addon){
+	public com.sm.ench.NData regNode(int id,String name,String methodName,int nodeGroup,Addon addon){
 		com.sm.main.AddonHandler ah = (com.sm.main.AddonHandler)AH;
 		com.sm.ench.NData nd = ah.regNode(ID,id,name,methodName,nodeGroup,addon);
 		return nd;
