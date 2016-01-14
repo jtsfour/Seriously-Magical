@@ -10,16 +10,17 @@ import net.minecraft.item.ItemStack;
 
 public class Ench {
 	
-	private ArrayList<Node> nodes = new ArrayList<Node>();
 	private Index INDEX;
+	private ArrayList<Node[]> trees = new ArrayList<Node[]>();
 	private int[] locs = new int[750];
+	private int LEVEL = 0;
 	
-	public Ench(){
+	public Ench(int level){
 		INDEX=Instances.getIndex();
-		
+		LEVEL=level;
 	}
 	
-	public Node getNode(int... loc){
+	public Node getNode(int tree,int... loc){
 		return  null;
 	}
 	
@@ -27,8 +28,29 @@ public class Ench {
 		
 	}
 	
-	public void addNode(int uid, int... loc){
-		Node node = new Node(INDEX.getNData(uid),this,loc);
+	public int addTree(){
+		trees.add(new Node[100]);
+		return trees.size()-1;
+	}
+	
+	public void removeTree(int tree){
+		trees.remove(tree);
+	}
+	
+	public void addNode(int tree,int loc,Node node)throws ArrayIndexOutOfBoundsException{
+		trees.get(tree)[loc]=node;
+	}
+	
+	public void removeNode(int tree,int loc){
+		trees.get(tree)[loc]=null;
+	}
+	
+	public Node getNode(int tree,int loc)throws ArrayIndexOutOfBoundsException{
+		return trees.get(tree)[loc];
+	}
+	
+	/*public void addNode(int uid,int level, int... loc){
+		Node node = new Node(INDEX.getNData(uid),this,level,loc);
 		nodes.add(node);
 		boolean b1=true;
 		for(int i=0;b1;i++){
@@ -39,11 +61,9 @@ public class Ench {
 			}
 		}
 		
-	}
+	}*/
 	
-	public void removeNode(int... loc){
-		
-	}
+	
 	
 	
 	

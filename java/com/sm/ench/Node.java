@@ -14,15 +14,17 @@ public class Node {
 	public boolean hasParent=false;
 	public NData ndata;
 	public NodePar datatopass = null;
+	public int LEV = 0;
 	
 	//Type variables
 	
 	//Constructor for brand new Nodes
-	public Node(NData nd,Ench ench,int... loc){
+	public Node(NData nd,Ench ench,int level,int... loc){
 		UID=nd.getUID();
 		ENCH=ench;
 		LOC=loc;
 		ndata=nd;
+		LEV=level;
 		//ID=ENCH.regNode(this);
 		//hasID=true;
 		//ENCH.setTreeP(parent,this);
