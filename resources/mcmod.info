@@ -1,0 +1,16 @@
+[
+{
+  "modid": "seriouslymagical",
+  "name": "Seriously Magical",
+  "description": "Adds a new enchanting system with new blocks and magical artifacts!",
+  "version": "1.0",
+  "mcversion": "${1.8}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["jtsfour"],
+  "credits": "jtsfour",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
