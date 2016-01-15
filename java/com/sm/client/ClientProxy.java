@@ -1,4 +1,6 @@
-package com.sm.core;
+package com.sm.client;
+
+import com.sm.core.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
 	
