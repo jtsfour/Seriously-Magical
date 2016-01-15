@@ -56,7 +56,7 @@ public class ExampleAddon extends Addon {
 		/*par4 the group your node goes in*/
 		//par 5 The addon object this node originates from
 		regNode(1000, "ExampleNode", "examplenode_method", 1,this).setCanBeOnSword(true).setCanBeOnTool(true,1);//there are many options you can allow/disallow here;
-		regNode(1001,"Node 1","node_1_method",1,this).setLinkNames();
+		regNode(1001,"Node 1","node_1_method",1,this);
 	}
 
 }

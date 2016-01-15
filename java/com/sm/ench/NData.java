@@ -16,12 +16,13 @@ public class NData {
 	private boolean CANBW=false;
 	private boolean CANAMU=false;
 	//private boolean CANMULTI=false;
+	private boolean CANPICK=false;
 	private boolean CANARM=false;
 	private boolean CANTOOL=false;
 	private boolean CANLINK=false;
 	private boolean LINKIDS=false;
 	private String ADDONID;
-	private String[] LINKNAMES = new String[10];
+	//private String[] LINKNAMES = new String[10];
 	private int[] AEVENTS = new int[20];
 	
 	private final int UID;
@@ -36,7 +37,8 @@ public class NData {
 		UID=uid;
 	}
 	
-	public int getID(){
+	@Deprecated()
+	public int getID(){//Use getUID() instead
 		return ID;
 	}
 	
@@ -72,6 +74,10 @@ public class NData {
 	public boolean canAmulet(){
 		return CANAMU;
 	}
+	
+	public boolean canPick(){
+		return CANPICK;
+	}
 	/*public boolean canMulti(){
 		return CANMULTI;
 	}*/
@@ -89,7 +95,7 @@ public class NData {
 	public boolean hasLinkIds(){
 		return LINKIDS;
 	}
-	public String getLinkName(int id){
+	/*public String getLinkName(int id){
 		if(LINKIDS){
 			try{
 				return LINKNAMES[id];
@@ -102,7 +108,7 @@ public class NData {
 			System.out.println("[ERROR] ATTEMPTED TO GET LINKNAME WITHOUT CHECKING LINKIDS");
 			return null;
 		}
-	}
+	}*/
 	
 	public int getUID(){
 		return UID;
@@ -130,6 +136,10 @@ public class NData {
 		CANBW=b1;
 		return this;
 	}
+	public NData setCanBeOnPick(boolean b1){
+		CANPICK=b1;
+		return this;
+	}
 	public NData setCanBeOnAmulet(boolean b1){
 		CANAMU=b1;
 		return this;
@@ -151,11 +161,11 @@ public class NData {
 		CANLINK=b1;
 		return this;
 	}
-	public NData setLinkNames(String... names){
+	/*public NData setLinkNames(String... names){
 		LINKIDS=true;
 		LINKNAMES=names;
 		return this;
-	}
+	}*/
 	
 	
 		
