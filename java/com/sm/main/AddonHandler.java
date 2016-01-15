@@ -17,8 +17,6 @@ public class AddonHandler {
 	public String VER = "0.0.0.0";
 	private static ArrayList<String> ids = new ArrayList<String>();
 	private static ArrayList<Addon> addons  = new ArrayList<Addon>();
-	//private static int c1 = 0;
-	//private static int c2 = 0;
 	
 	public AddonHandler(){
 		INST=Instances.getInstance();
@@ -29,11 +27,9 @@ public class AddonHandler {
 	
 	public void registerAddon(Addon addon){
 		boolean vercheck = true;
-		for(int i=0;i<3;i++){
-			if(VER.charAt(i) != addon.getCompatibleSMVersion().charAt(i)){
+			if(VER.charAt(0) != addon.getCompatibleSMVersion().charAt(0)){
 				vercheck=false;
 			}
-		}
 		if(!vercheck){
 		System.out.println("[ERROR] Addon "+ addon.getAddonName() + " failed to load due to incompatible version error");
 		}else{
@@ -77,15 +73,11 @@ public class AddonHandler {
 		}
 	}
 	
-	public void reportAddonErr(String id){
-		
-	}
-	
 	public static AddonHandler getInstance(){
 		return Instances.getAHandler();
 	}
 	
-	public boolean isLoaded(String id){
+	public boolean isAddonLoaded(String id){
 		boolean b1 = true;
 		for(int i =0;b1;i++){
 			try{

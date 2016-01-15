@@ -1,8 +1,7 @@
 package com.sm.ench;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import com.sm.api.Addon;
 import com.sm.main.AddonHandler;
 import com.sm.main.Instances;
@@ -99,8 +98,8 @@ public class Index {
 		if(b1){
 			return i0;
 		}else{
-			System.out.println("[ERROR] Search query for Addon "+id+" failed stopping this addon");
-			AH.reportAddonErr(id);
+			//System.out.println("[ERROR] Search query for Addon "+id+" failed stopping this addon");
+			//AH.reportAddonErr(id);
 			return 0;
 		}	
 	}
@@ -151,35 +150,5 @@ public class Index {
 		uids.add(v5);
 		return v5;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	// NODE CODE
-	/*
-	public static boolean test(NodePar np,NData nd,Node node){
-		System.out.println("I WORKED!");
-		return true;
-	}
-	
-	public static boolean trigger1(NodePar np,NData nd,Node node){
-		if(np.eventtype==1){
-			node.datatopass=np;
-			return true;
-		}else{
-			return false;
-		}
-	}
-	*/
-	
-	
-	
 	
 }
