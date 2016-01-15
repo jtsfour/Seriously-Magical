@@ -1,5 +1,6 @@
 package com.sm.event;
 
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,9 +11,10 @@ public class SMHandler {
 	private boolean server=false;//Some events will only be processed on the server side e.g. HitEntity for enchantments
 	
 	public SMHandler(){
-		//if(FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER){//on singleplayer returns false
-			server=true;
-		//}
+				/*if(FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER){
+					server=true;
+				}*/
+				server=true;
 	}
 	
 	@SubscribeEvent
