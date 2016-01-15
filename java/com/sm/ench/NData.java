@@ -1,7 +1,7 @@
 package com.sm.ench;
 
 import com.sm.api.Addon;
-import com.sm.main.Instances;
+import com.sm.core.Instances;
 
 public class NData {
 	

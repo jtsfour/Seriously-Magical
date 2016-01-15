@@ -1,4 +1,4 @@
-package com.sm.main;
+package com.sm.core;
 
 import com.sm.ench.Index;
 

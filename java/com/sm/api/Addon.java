@@ -10,7 +10,7 @@ public abstract class Addon {
 	
 	public Addon(){
 		try{
-			AH=com.sm.main.Instances.getInstance().getAHandler();
+			AH=com.sm.core.Instances.getInstance().getAHandler();
 		}catch(Exception e){
 			flag=true;
 		}
@@ -24,7 +24,7 @@ public abstract class Addon {
 				bool=true;
 				System.out.println("Found Mod Initializing Addon");
 				try{
-					com.sm.main.AddonHandler ah = (com.sm.main.AddonHandler)AH;
+					com.sm.core.AddonHandler ah = (com.sm.core.AddonHandler)AH;
 					ah.registerAddon(addon);
 				}catch(Exception e){
 					bool=false;
@@ -41,7 +41,7 @@ public abstract class Addon {
 		}
 	
 	public com.sm.ench.NData regNode(int id,String name,String methodName,int nodeGroup,Addon addon){
-		com.sm.main.AddonHandler ah = (com.sm.main.AddonHandler)AH;
+		com.sm.core.AddonHandler ah = (com.sm.core.AddonHandler)AH;
 		com.sm.ench.NData nd = ah.regNode(ID,id,name,methodName,nodeGroup,addon);
 		return nd;
 	}

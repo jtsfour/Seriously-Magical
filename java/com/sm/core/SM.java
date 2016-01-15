@@ -1,4 +1,4 @@
-package com.sm.main;
+package com.sm.core;
 
 
 import com.sm.addons.DefaultAddon;
@@ -21,14 +21,14 @@ public class SM
     public static final String MODID = "seriouslymagical";
     public static final String VERSION = "1.0.0.0";
     
-    @SidedProxy(clientSide = "com.sm.main.ClientProxy",serverSide = "com.sm.main.ServerProxy")
-    public static IProxy proxy;
+    @SidedProxy(clientSide = "com.sm.main.ClientProxy",serverSide = "com.sm.main.CommonProxy")
+    public static CommonProxy proxy;
     
     @Mod.Instance("SM")
     public static SM instance;
     
     
-    //EnchEventHandler enhandler = new EnchEventHandler();
+   
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -36,14 +36,10 @@ public class SM
     	Instances inst = new Instances();
     	Instances.setSM(this);
     	Index index = new Index();
-		Initializer initer = new Initializer(index);
 		AddonHandler ah = new AddonHandler();
-		//EItemHandler eih = new EItemHandler();
-		//EnchObjHandler eoh = new EnchObjHandler();
-		//EnchPU epu = new EnchPU();
     	//MinecraftForge.EVENT_BUS.register(enhandler);
     	//FMLCommonHandler.instance().bus().register(enhandler);
-		
+		proxy.init();
     }
    
     

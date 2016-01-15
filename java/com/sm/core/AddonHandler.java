@@ -1,4 +1,4 @@
-package com.sm.main;
+package com.sm.core;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

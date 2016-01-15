@@ -2,7 +2,8 @@ package com.sm.ench;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import com.sm.main.Instances;
+
+import com.sm.core.Instances;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

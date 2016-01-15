@@ -2,9 +2,10 @@ package com.sm.ench;
 
 
 import java.util.ArrayList;
+
 import com.sm.api.Addon;
-import com.sm.main.AddonHandler;
-import com.sm.main.Instances;
+import com.sm.core.AddonHandler;
+import com.sm.core.Instances;
 
 public class Index {
 	
