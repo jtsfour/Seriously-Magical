@@ -1,6 +1,9 @@
 package com.sm.event;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent.SaveToFile;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,7 +19,7 @@ public class SMHandler {
 				}*/
 				server=true;
 	}
-	
+	//World events
 	@SubscribeEvent
 	public void load(WorldEvent.Load e){
 		if(server){
@@ -37,4 +40,23 @@ public class SMHandler {
 			
 		}
 	}
+	
+	//Player events
+	@SubscribeEvent()
+	public void playerJoin(EntityJoinWorldEvent e){
+		if(e.entity instanceof EntityPlayer){
+			
+		}
+	}
+	
+	@SubscribeEvent()
+	public void playerLoad(PlayerEvent.LoadFromFile e){
+		
+	}
+	
+	@SubscribeEvent()
+	public void playerSave(PlayerEvent.SaveToFile e){
+		
+	}
+	
 }

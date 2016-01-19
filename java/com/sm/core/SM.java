@@ -5,6 +5,9 @@ import com.sm.addons.DefaultAddon;
 import com.sm.ench.Index;
 import com.sm.event.SMHandler;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -30,6 +33,13 @@ public class SM
     
     
    SMHandler smhandler = new SMHandler();
+   
+   
+   
+   
+   
+   
+   
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -55,7 +65,6 @@ public class SM
 		
     
     }
-
   
 	
 }
