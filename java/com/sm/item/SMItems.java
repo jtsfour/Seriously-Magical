@@ -24,12 +24,12 @@ public class SMItems {
 	public static SMItem emeraldamulet;
 	public static SMItem lapisamulet;
 	//staffs
-	public static SMItem BlazeStaff;
-	public static SMItem IronStaff;
-	public static SMItem StoneStaff;
-	public static SMItem WoodenStaff;
-	public static SMItem DaimondStaff;
-	public static SMItem EmeraldStaff;
+	public static SMItem blazestaff;
+	public static SMItem ironstaff;
+	public static SMItem stonestaff;
+	public static SMItem woodenstaff;
+	public static SMItem diamondstaff;
+	public static SMItem emeraldstaff;
 	
 	public boolean client;
 	
@@ -43,15 +43,30 @@ public class SMItems {
 		emeraldamulet = new EmeraldAmulet("emeraldamulet");
 		lapisamulet = new LapisAmulet("lapisamulet");
 		
+		blazestaff = new BlazeStaff("blazestaff");
+		ironstaff = new IronStaff("ironstaff");
+		stonestaff = new StoneStaff("stonestaff");
+		woodenstaff = new WoodenStaff("woodenstaff");
+		diamondstaff = new DiamondStaff("diamondstaff");
+		emeraldstaff = new EmeraldStaff("emeraldstaff");
+		
 		}
 	
 	public void postinit(){
 		registerItemModel(scroll);
 		registerItemModel(emptyscroll);
 		registerItemModel(stonetablet);
+		
 		registerItemModel(diamondamulet);
 		registerItemModel(emeraldamulet);
 		registerItemModel(lapisamulet);
+		
+		registerItemModel(blazestaff);
+		registerItemModel(ironstaff);
+		registerItemModel(stonestaff);
+		registerItemModel(woodenstaff);
+		registerItemModel(diamondstaff);
+		registerItemModel(emeraldstaff);
 		
 	}
 	
