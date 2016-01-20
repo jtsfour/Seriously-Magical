@@ -5,9 +5,6 @@ import com.sm.addons.DefaultAddon;
 import com.sm.ench.Index;
 import com.sm.event.SMHandler;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
 
 
@@ -49,7 +47,9 @@ public class SM
     	Index index = new Index();
 		AddonHandler ah = new AddonHandler();
     	MinecraftForge.EVENT_BUS.register(smhandler);
-		proxy.init();
+    	boolean b1 = false;
+    	if(event.getSide() == Side.CLIENT){b1=true;}
+		proxy.init(b1);
     }
    
     
@@ -57,7 +57,7 @@ public class SM
     public void init(FMLInitializationEvent event)
     {
 		DefaultAddon defaddon = new DefaultAddon();
-    
+		proxy.postInit();
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)

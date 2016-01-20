@@ -1,4 +1,4 @@
-package com.sm.items;
+package com.sm.item;
 
 public class Recipes {
 	
