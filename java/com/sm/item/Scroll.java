@@ -2,22 +2,24 @@ package com.sm.item;
 
 import com.sm.core.SM;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class Scroll extends Item {
+public class Scroll extends SMItem {
 	
-	private final String name = "scroll";
-	public Scroll(){
-		GameRegistry.registerItem((Item)this, name);
-		//setUnlocalizedName(SM.MODID + "_" + name);
-		setUnlocalizedName("seriouslymagical_" + name);
+	
+	public Scroll(String name){
+		super(name);
+		this.setCreativeTab(SMItems.SMTAB);
 	}
 	
-	public String getName(){
-		return name;
-	}
+	
+	
+	
 	
 }
 

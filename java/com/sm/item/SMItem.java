@@ -7,14 +7,20 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SMItem extends Item {
-	private final String name = "smitem";
-	public SMItem(){
-		GameRegistry.registerItem(this, name);
+	private String NAME = "";
+	public SMItem(String name){
+		super();
+		NAME=name;
+		setUnlocalizedName(SM.MODID+"_"+NAME);
+		GameRegistry.registerItem(this, NAME);
 	}
 	
 	public String getName(){
-		return name;
+		return NAME;
 	}
+	
+	
+	
 }
 
 
