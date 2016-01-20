@@ -22,6 +22,7 @@ public class SM
 {
     public static final String MODID = "seriouslymagical";
     public static final String VERSION = "1.0.0.0";
+    public static boolean client = false;
     
     @SidedProxy(clientSide = "com.sm.client.ClientProxy",serverSide = "com.sm.core.CommonProxy")
     public static CommonProxy proxy;
@@ -32,7 +33,13 @@ public class SM
     
    SMHandler smhandler = new SMHandler();
    
+   public static boolean isServerSide(){
+	   return !client;
+   }
    
+   public static boolean isClientSide(){
+	   return client;
+   }
    
    
    
@@ -49,6 +56,7 @@ public class SM
     	MinecraftForge.EVENT_BUS.register(smhandler);
     	boolean b1 = false;
     	if(event.getSide() == Side.CLIENT){b1=true;}
+    	client=b1;
 		proxy.init(b1);
     }
    

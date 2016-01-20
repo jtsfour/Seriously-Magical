@@ -1,1 +1,7 @@
 itemGroup.smtab=Seriously Magical
+item.seriouslymagical_scroll.name=Scroll
+item.seriouslymagical_emptyscroll.name=Empty Scroll
+item.seriouslymagical_stonetablet.name=Stone Tablet
+item.seriouslymagical_diamondamulet.name=Diamond Amulet
+item.seriouslymagical_emeraldamulet.name=Emerald Amulet
+item.seriouslymagical_lapisamulet.name=Lapis Amulet

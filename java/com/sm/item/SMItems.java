@@ -20,9 +20,9 @@ public class SMItems {
 	public static SMItem emptyscroll;
 	public static SMItem stonetablet;
 	//amulets
-	public static SMItem DaimondAmulet;
-	public static SMItem EmeraldAmulet;
-	public static SMItem LapisAmulet;
+	public static SMItem diamondamulet;
+	public static SMItem emeraldamulet;
+	public static SMItem lapisamulet;
 	//staffs
 	public static SMItem BlazeStaff;
 	public static SMItem IronStaff;
@@ -39,12 +39,19 @@ public class SMItems {
 		emptyscroll = new EmptyScroll("emptyscroll");
 		stonetablet = new StoneTablet("stonetablet");
 		
+		diamondamulet = new DiamondAmulet("diamondamulet");
+		emeraldamulet = new EmeraldAmulet("emeraldamulet");
+		lapisamulet = new LapisAmulet("lapisamulet");
+		
 		}
 	
 	public void postinit(){
 		registerItemModel(scroll);
 		registerItemModel(emptyscroll);
 		registerItemModel(stonetablet);
+		registerItemModel(diamondamulet);
+		registerItemModel(emeraldamulet);
+		registerItemModel(lapisamulet);
 		
 	}
 	
